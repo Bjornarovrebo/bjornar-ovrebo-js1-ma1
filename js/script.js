@@ -60,7 +60,7 @@ catNames(cats);
 
 //question 8
 
-//I got all the items as objects in the console, and struggled to understand how to get the name and age individually.  
+ 
 
 function createCats(Cats) {
 
@@ -70,6 +70,12 @@ function createCats(Cats) {
 
         let catName = cats[i].name;
         let catAge = cats[i].age;
+
+        let ageUnknown = "Nobody knows";
+
+        if(catAge === undefined) {
+            catAge = ageUnknown;
+        }
 
         html += `<div> 
                  <h5>Name : ${catName}</h5>
